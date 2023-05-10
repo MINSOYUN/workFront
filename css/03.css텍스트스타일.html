@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 텍스트 스타일</title>
+    <style> /* 내부 스타일 */
+
+    </style>
+    <!-- 외부스타일 -->
+    <link rel="stylesheet" href="03.css텍스트스타일.css">
+</head>
+<body>
+    <h3>글꼴 관련 스타일</h3>
+    <!-- 인라인 스타일
+        우선순위가 높아집니다
+        외부파일로 분리하기가 어렵다 -->
+    <h4>1. font-family</h4>
+    텍스트의 글꼴을 지정할 때 사용
+    <p id='ff1'>글꼴 변경 테스트 1</p>
+    <p id='ff2'>글꼴 변경 테스트 2</p>
+    <p id='ff3'>글꼴 변경 테스트 3</p>
+
+    <p class='web-font'>
+        웹 폰트 사용 -> 
+        <a href='http://fonts.google.com/'>구글 웹 폰트</a>
+        <br> style 태그안에 @import 한 후 사용 가능
+    </p>
+    <hr>
+
+    <h4>2. font-size</h4>
+    <ul>
+        <li id='size1'>px 테스트</li>
+        <li id='size2'>em 테스트</li>
+        <li id='size3'>% 테스트</li>
+    </ul>
+    <hr>
+
+    <h4>3. font-weight</h4>
+    텍스트의 두께를 변경할 때 사용
+    <ul>
+        <li>원래 굵기</li>
+        <li id='fw1'>굵은 글꼴</li>
+        <li id='fw2'>가늘게</li>
+        <li id='fw3'>굵게</li>
+    </ul>
+    <hr>
+
+    <h4>4. font-variant</h4>
+    작은 대문자로 변경할 때 사용
+    <p>I LOVE YOU</p>
+    <p>i love you</p>
+    <p id='fv'>i love you</p>
+    <hr>
+
+    <h4>5. font-style</h4>
+    텍스트의 기울임을 지정할 때 사용
+    <ul>
+        <li>기울임 없음</li>
+        <li id='fs1'>italic 기울임</li>
+        <li id='fs2'>oblique 기울임</li>
+    </ul>
+    <hr><hr>
+
+    <h3>텍스트 스타일</h3>
+    <h4>6. color </h4>
+    텍스트의 색상을 지정할 때 사용
+    <ul>
+        <li id='c-name'>색상명으로 지정</li>
+        <li id='c-16'>16진수 값으로 지정</li>
+        <li id='c-rgb'>RGB로 설정</li>
+        <li id='c-rgba'>RGBA로 설정</li>
+    </ul>
+    <hr>
+
+    <h4>7. text-decoration</h4>
+    텍스트에 줄을 그을 때 사용 -> 위, 아래, 중간
+    <ul>
+        <li id='td-none'>none</li>
+        <li id='td-underline'>underline</li> <br>
+        <li id='td-overline'>overline</li>
+        <li id='td-line-through'>line through</li>
+        <a href='test.html'>test 링크</a>
+    </ul>
+    <hr>
+    <h4>8. text-shadow</h4>
+    텍스트에 그림자 효과를 추가
+    <br>text-shadow: 가로거리 세로거리 번짐정도 색상<br>
+    양수 글자의 오른쪽, 아래쪽<br>
+    음수 글자의 왼쪽, 위쪽<br>
+    번짐정도: 양수값 그림자가 모든 방향으로 퍼져 나가므로 크게 표현<br>
+    <p>
+    <div id='bg'>
+        <span id='ts1'>html5</span><br>
+        <span id='ts2'>css</span><br>
+        <span id='ts3'>javascript</span>
+    </div>
+    </p>
+    <hr>
+
+    <h4>9. text-transform</h4>
+    영문 텍스트의 대소문자 변환
+    <ul>
+        <li id='tt1'>none</li>
+        <li id='tt2'>capitalize hello</li>
+        <li id='tt3'>uppercase</li>
+        <li id='tt4'>LOWER CASE</li>
+    </ul>
+</body>
+</html>
