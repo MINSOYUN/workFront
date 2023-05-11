@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 스타일</title>
+    <link rel="stylesheet" href="./04.레이아웃 스타일.css">
+</head>
+<body>
+    <h3>레이아웃 스타일</h3>
+    <h4 class='title'>기본 스타일</h4>
+    <h5>width, height</h5>
+    <div id='box1'>
+        고정크기
+    </div>
+    <div id='box2'>
+        가변크기 -> %를 이용하여 사이즈를 지정
+    </div>
+    <hr>
+
+    <h4 class='title'>화면의 배치 방법 변경</h4><br>
+    블럭 요소, 인라인 블럭 요소, 인라인 요소<br>
+    컨텐츠가 들어있지 않으면 높이가 0으로 처리<br>
+    display: 상자의 크기, 테두리 지정<br>
+    display-inline: display 속상을 inline 속성으로 변경
+    display-inline-block: display 속성을 inline-block 속성으로 변경
+    <hr>
+    <b>블럭 요소</b>: 
+    <div class=' display'>0번째 영역-block요소</div>
+    <hr>
+    <b>인라인 요소</b>: 크기를 지정할 수 없다 <br>
+    컨텐츠가 가진 크기만큼 영역을 차지<hr>
+    <div class=' display display-inline area1'>1번째 영역</div>
+    <div class=' display display-inline area1'>1번째 영역</div>
+    <div class=' display display-inline area1'>1번째 영역</div>
+    <div class=' display display-inline area1'>1번째 영역</div>
+    <div class=' display display-inline area1'>1번째 영역</div>
+    <hr>
+    <b>인라인- 블럭 요소</b>: 크기를 지정할 수 있다<br>
+    한줄에 여러요소를 나열 할 수 있다<br>
+    <div class=' display display-inline-block area2'>2번째 영역</div>
+    <div class=' display display-inline-block area2'>2번째 영역</div>
+    <div class=' display display-inline-block area2'>2번째 영역</div>
+    <div class=' display display-inline-block area2'>2번째 영역</div>
+    <div class=' display display-inline-block area2'>2번째 영역</div>
+    <hr>
+
+    <h4 class='title'>테두리 스타일</h4>
+    <div class='border b1'></div><br>
+    <div class='border b2'></div><br>
+    <div class='border b3'></div><br>
+    <div class='border b4'></div><br>
+    <div class='border b5'></div><br>
+    <div class='border b6'></div><br>
+    <div class='border b7'></div><br>
+    <div class='border b8'></div><br>
+    <div class='border b9'></div><br>
+    <div class='border b10'></div>
+    <hr>
+    
+    <h4 class='title'>여백(margin) 스타일</h4><br>
+    요소의 주변 공간 <br>
+    margin을 이용하여 요소와 요소간 간격을 조절 할 수 있다
+    <div class='space'>기준 div</div>
+    * 요소가 세로로 배치될 경우 마진의 중첩현상이 발생 하여 마진이 큰 쪽의 여백이 작용한다
+    <div class='space margin1'>박스쉐도우</div>
+    <div class='space margin2'>여백추가2</div>
+    <div class='space margin3'>여백추가3</div>
+    <hr>
+
+    <h4 class='title'>padding</h4><br>
+    테두리와 콘텐츠 사이의 영역
+    <div class='space'>기본</div>
+    <div class='space padding1'>패딩 추가1</div>
+    <div class='space padding2'>패딩 추가2</div>
+    <div class='space padding3'>패딩 추가3</div>
+
+</body>
+</html>

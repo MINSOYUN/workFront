@@ -1,0 +1,145 @@
+        .title{
+            display: inline;
+            background-color: rgba(252, 192, 172, 0.493);
+        }
+        
+
+        #box1{
+            border: 2px solid rgba(255, 0, 0, 0.356);
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            /*
+            세로 가운데 정렬
+            height, line-height를 같은 값을 설정
+            */
+        }
+        #box2{
+            border: 2px solid rgba(255, 0, 0, 0.356);
+            width: 50%;
+            height: 100px;
+        }
+
+
+        .display{
+            border: 2px solid black;
+            width: 150px;
+            height: 50px;
+        }
+        .display-inline{
+            display: inline;
+        }
+        .display-inline-block{
+            display: inline-block;
+        }
+        .area1{
+            background-color: rgba(221, 178, 178, 0.308);
+            margin: 20px;
+            padding: 20px;
+        }
+        .area2{
+            background-color: rgba(238, 191, 104, 0.24);
+        }
+
+
+        .border{
+           width: 100px;
+           height: 100px;
+        }
+        .b1{
+            border-style: none;
+        }
+        .b2{
+            border-style: hidden;
+        }
+        .b3{
+            border-style: dotted;
+            border-color: hotpink;
+            border-top-color: aqua;
+            border-left-color: aquamarine;
+            border-bottom-color: greenyellow;
+            border-right-color: blanchedalmond;
+            border-width: thick, thin;
+            /* border-width: 10px 5px 2px 1px; */
+        }
+        .b4{
+            /* 선 스타일 지정 */
+            border-style: dashed;
+            /* 선 색상 지정 */
+            border-color:rgb(96, 79, 168);
+            /* 꼭지점 둥글게 처리
+                상단에 꼭지점을 둥글게 처리 - 탭 만들 때 종종 사용된다 */
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .b5{
+            border-style: double;
+            /* border-radius: 20px; */
+            border-radius: 50%;
+            border-width: 10px;
+        }
+        .b6{
+            border-style: groove;
+            border-width: 10px;
+        }
+        .b7{
+            border-style: inset;
+        }
+        .b8{
+            border-style: outset;
+        }
+        .b9{
+            border-style: ridge;
+        }
+        .b10{
+            border-style: solid;
+        }
+
+
+        .space{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(224, 255, 255, 0.425);
+            border: 1px dotted;
+        }
+        .margin1{
+            margin: 50px;
+            /* 그림자
+                수평거리, 수직거리, [흐림정도], [번짐정도], 색상 inset 
+                흐림정도 / 번짐정도 : 0~ 양수값
+                inset: 그림자가 요소 안으로 표시된다
+                */
+            box-shadow: -5px -5px 30px 10px rgba(58, 172, 172, 0.404);
+        }
+        /* 마진 중첩 현상
+            요소를 세로로 배치할 경우 마진이 큰 쪽으로 겹쳐진다 */
+        .margin2{
+            /* 상하 좌우*/
+            margin: 50px 100px;
+        }
+        .margin3{
+            /* 상 우 하 좌*/
+            margin: 30px 50px 80px 100px;
+            /* 각각 따로 주는 것과 값이 같다 */
+            margin-top: 30px;
+            margin-right: 50px;
+            margin-bottom: 80px;
+            margin-left: 100px;
+        }
+
+
+        .padding1{
+            /* 상하좌우 모두 30px 적용 */
+            padding: 30px;
+        }
+        .padding2{
+            padding-top: 80px;
+            padding-right: 100px;
+        }
+        .padding3{
+            padding: 10px 50px;
+            /* 마진 속성을 이용해 가운데 정렬
+                요소의 너비가 지정 되어 있어야 한다
+                왼쪽 마진과 오른쪽 마진 속성값을 auto로 지정 */
+            margin: 0px auto;
+        }

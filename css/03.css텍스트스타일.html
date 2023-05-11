@@ -107,5 +107,100 @@
         <li id='tt3'>uppercase</li>
         <li id='tt4'>LOWER CASE</li>
     </ul>
+    <hr>
+
+    <h4>10. line-height</h4>
+    문장 사이의 줄간격을 조정하고 싶을 때
+
+    	<!-- 왼쪽 정렬 -->
+	<p class='lh1'>
+    Integer elementum massa at nulla placerat varius.
+	Suspendisse in libero risus, in interdum massa.
+	Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+	Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+    </p>    
+	
+    <!-- 오른쪽 정렬 -->
+    <p class='lh2'>
+	Integer elementum massa at nulla placerat varius.
+	Suspendisse in libero risus, in interdum massa.
+	Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+	Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+    </p>
+
+	<!-- 가운데 정렬 -->
+    <p class='lh3'>
+	Integer elementum massa at nulla placerat varius.
+	Suspendisse in libero risus, in interdum massa.
+	Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+	Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+    </p>
+
+	<!-- 양쪽 정렬 -->
+    <p class='lh4'>
+	Integer elementum massa at nulla placerat varius.
+	Suspendisse in libero risus, in interdum massa.
+	Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+	Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+    </p>
+
+    <h4>11. 목록 스타일</h4>
+    <h5>순서가 없는 목록 스타일</h5>
+    <!-- disc 기본 모양 -->
+    <ul style='list-style-type: disc;'>
+        <li>html5</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jquery</li>
+    </ul>
+
+    <ul style='list-style-type: square; list-style-position: inside;'>
+         <!-- square: 사각형 모양 / inside: 들여쓰기-->
+        <li>html5</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jquery</li>
+    </ul>
+
+    <ul style='list-style-type: none;'>
+        <li>html5</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jquery</li>
+    </ul>
+    <!-- 이미지로 주는 방법 -->
+    <ul style='list-style-image: url(images/dot.png);'>
+        <li>html5</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jquery</li>
+    </ul>
+    <hr>
+    
+    <table border='1'>
+        <!-- caption: 테이블의 제목이나 내용을 추가하는 태그이다
+            (기본 위치는 테이블 위 정중앙에 위치한다) -->
+        <caption><mark>브라우저의 종류</mark></caption>
+        <tr>
+            <th>브라우저명</th>
+            <th>제조사</th>
+            <th>홈페이지</th>
+        </tr>
+        <tr>
+            <td>익스플로어</td>
+            <td>MS</td>
+            <td><i>http://www.microsoft.com</i></td>
+        </tr>
+        <tr>
+            <td>크롬</td>
+            <td>Google</td>
+            <td><i>http://www.google.com</i></td>
+        </tr>
+        <tr>
+            <td>파이어폭스</td>
+            <td>Mozila</td>
+            <td><i>http://www.mozila.com</i></td>
+        </tr>
+    </table>
 </body>
 </html>

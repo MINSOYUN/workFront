@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            /* 블릿 제거*/
+            list-style: none;
+            /* float 해지 */
+            /* clear: both; */
+        }
+        li{ /* 공간을 없앤다*/
+            /* float: left; */
+            border: 1px dashed rgba(207, 166, 205, 0.644);
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            display: inline-block;
+        }
+        a{
+            /* a 요소는 inline 요소이므로 width, height 속성을 가지지 못한다
+            -> 영역을 가질 수 없고 컨텐츠의 영역만 가질 수 있다 
+            -> lnline-block으로 변경 */
+            text-decoration: none;
+            width: 100px;
+            height: 50px;
+            border: 1px solid rgba(100, 148, 237, 0.568);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href='#'>메뉴1</a></li>
+        <!-- <li><a href='#'>메뉴1</a></li
+        ><li><a href='#'>메뉴1</a></li>
+        이러면 공백이 안생긴다 -->
+        <li><a href='#'>메뉴2</a></li>
+        <li><a href='#'>메뉴3</a></li>
+        <li><a href='#'>메뉴4</a></li>
+    </ul>
+
+    <ul>
+        <li><a href='#'>메뉴1</a></li>
+        <li><a href='#'>메뉴2</a></li>
+        <li><a href='#'>메뉴3</a></li>
+        <li><a href='#'>메뉴4</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.title_box{
+    background-image: url(./apple_img.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 700px;
+    height: 500px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.text{
+    position: absolute;
+    padding: 15px 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0,0.5);
+    width: 100%;
+}
+
+.title_box .text h2{
+    color: #fff;
+    font-size: 36px;
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+
+.title_box .text p{
+    color: #fff;
+    font-size: 16px;
+    padding-left: 20px;
+    color: orange;
+    line-height: 180%;
+}
+
+
+table{
+    width: 600px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+table th{
+    background-color: #000;
+    color: #fff;
+    text-align: left;
+    padding: 5px;
+}
+
+table tr td{
+    border: 1px solid #000;
+    height: 200px;
+    text-align: center;
+}
+
+table tr td h3{
+    font-size: 24px;
+    color: red;
+    margin-bottom: 20px;
+}
+
+table tr td p{
+    line-height: 180%;
+}
+
+table tr td p .text_blue{
+    color: blue;
+}
+
+table tr td p .small_text{
+    font-size: 12px;
+}

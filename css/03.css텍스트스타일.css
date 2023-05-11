@@ -155,3 +155,38 @@
         text-transform: lowercase;
       }
 
+
+      .lh1{
+        font-size: 1em;
+        line-height: 1em;
+        text-align: left;
+      }
+      .lh2{
+        font-size: 1em;
+        line-height: 2em;
+        text-align: right;
+      }
+      .lh3{
+        font-size: 1em;
+        line-height: 3em;
+        text-align: center;
+      }
+      .lh4{
+        font-size: 1em;
+        line-height: 0.5em;
+        text-align: justify;
+      }
+
+      table{
+        /* 캡션의 위치 */
+        caption-side: bottom;
+        /* 테두리 실선 */
+        border: 1px solid rgb(71, 60, 16);
+        /* 테두리 한 줄로 표시 */
+        border-collapse: collapse;
+      }
+      th, tr, td{
+        border: 1px dotted goldenrod;
+        padding: 10px;
+      }
+
