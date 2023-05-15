@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background이미지</title>
+    <style>
+        body{
+            height: 100vw;
+            background-image: url(images/bg2.png);
+            /* 반복 제거 */
+            background-repeat: no-repeat;
+            /* 위치 지정 */
+            background-position: right top;
+            /* 배경 이미지 고정
+                기본값 scroll: 화면 스크롤과 함께 이미지도 스크롤 */
+            background-attachment: fixed;
+            /* 작성 순서는 상관 x 연결할 때 쉼표 사용 x */
+            background: url(images/bg4.jpg) no-repeat center bottom fixed;
+        }
+        #container{
+            /* 배경화면 반복 */
+            background-image: url(images/apple-bg.jpg);
+            background-repeat: no-repeat;
+            /* x 영역 가로만 반복 */
+            background-repeat: repeat-x;
+            /* y 영역 세로만 반복 */
+            /* repeat-x 와 repeat-y 작성하면 마지막에 작성한 코드 따라 실행된다 -> repeat-y */
+            background-repeat: repeat-y;
+            /* 배경화면 적용범위 지정 */
+            border: 5px dotted plum;
+            padding: 30px;
+            /* border 영역까지 포함하여 배경화면 출력 */
+            /* background-clip: border-box; */
+            /* padding 영역까지 포함하여 배경화면 출력 */
+            background-clip: padding-box;
+            background-clip: content-box;
+
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 10em;
+            font-weight: 900px;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            /* 배경 이미지 지정 */
+            background-image: url(images/book-icon.png);
+            /* 반복 제거 */
+            background-repeat: no-repeat;
+            /* left: 왼쪽 / center: 상하 가운데  */
+            background-position: left center;
+            /* 줄 간격 지정 */
+            line-height: 40px;
+            /* 패딩 지정 */
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id='container'>텍스트</div>
+    <h3>이지스퍼블리싱</h3>
+    <ul>
+        <li>회사소개</li>
+        <li>도서</li>
+        <li>자료실</li>
+        <li>동영상강의</li>
+    </ul>
+
+</body>
+</html>

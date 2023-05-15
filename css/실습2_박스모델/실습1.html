@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>배경 스타일</title>
+    <style>
+			.container{
+        background-image: url(../images/apple-bg.jpg);
+        width: 600px;
+        height: 400px;
+        /* 컨텐츠의 위치를 지정하기 위해 컨테이너 포지션 속성을 relative로 변경 */
+        position: relative;
+        padding: 25px;
+        background-repeat: no-repeat;
+      }
+      .content{
+        /* 배경화면 불투명 */
+        background-color: rgba(203, 206, 209, 0.507);
+        top: 300px;
+        padding-left: 10px;
+        /* 가로 크기 지정 */
+        width: 90%;
+        /* 위치 지정 */
+        position: absolute;
+        font-weight: 700px;
+        /* 가운데 정렬 */
+        text-align: center;
+        /* margin: 10px auto; */
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+		<div class="container">
+			<div class="content">
+				<h1>하루 한 알의 사과는 의사를 멀리 한다</h1>		
+			</div>
+		</div>
+  </body>
+</html>

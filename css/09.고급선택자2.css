@@ -1,0 +1,93 @@
+/* #를 이용하여 선택자를 나열하면 같은 스타일을 지정 */
+#activeTest, #hoverTest{
+    width: 100px;
+    height: 100px;
+    background-color: honeydew;
+    border: 1px solid gainsboro;
+}
+/* 사용자가 요소를 클릭하면 색상을 변경 */
+#activeTest:active{
+    background-color: cornsilk;
+}
+#hoverTest:hover{
+    background-color: rgba(189, 183, 107, 0.541);
+}
+
+
+/* 체크 박스가 체크되면 */
+input[type=checkbox]:checked{
+    width: 20px;
+    height: 20px;
+}
+/* 체크박스가 체크되면 형제요소 라벨 선택 */
+input[type=checkbox]+label{
+    font-size: 1.2em;
+    background-color: rgba(238, 232, 175, 0.589);
+}
+
+#userId:focus, #userPWd:focus{
+    background-color: #cccccc80;
+}
+
+option:enabled{
+    background-color: rgba(247, 213, 219, 0.466);
+}
+option:disabled{
+    background-color: rgba(220, 220, 220, 0.644);
+}
+button:enabled{
+    background-color: rgba(250, 210, 175, 0.486);
+}
+button:disabled{
+    background-color: rgba(220, 220, 220, 0.644);
+}
+
+
+/* 형제 관계 중 첫번째 요소를 선택 */
+/* p 중 첫번째 p */
+#test2 p:first-child{
+    background-color: rgba(183, 138, 228, 0.795);
+    color: white;
+}
+/* 형제 관계 중 마지막 요소를 선택 */
+/* 마지막 자식이 p 태그가 아니면 스타일이 지정되지 않는다
+    ex) <p> 뒤에 <pre>태그 존재 */
+#test2 p:last-child{
+    background-color: rgba(0, 100, 0, 0.493);
+}
+/* nth 몇번째 child ()안에 숫자 작성
+수식을 사용하거나 수식 대신 even 짝 odd 홀수를 대입해 줄 수 있다 */
+/* 짝수의 경우 even 대신 2n 작성 가능 */
+#test2 p:nth-child(even){
+    background-color: rgba(125, 148, 224, 0.651);
+}
+#test2 p:nth-child(2){
+    background-color: rgba(218, 165, 32, 0.651);
+}
+/* last 뒤에서 ()몇번째 선택 */
+#test2 p:nth-last-child(3){
+    background-color: rgba(135, 207, 235, 0.63);
+}
+
+
+/* 타입이 p인 요소들 중 첫번째 */
+#test3 p:first-of-type{
+    background-color: rgba(135, 206, 250, 0.884);
+    color: white;
+}
+#test3 p:last-of-type{
+    background-color: lightgoldenrodyellow;
+}
+#test3 p:nth-of-type(2n){
+    background-color: rgba(243, 173, 146, 0.473);
+}
+#test3 p:nth-of-type(3){
+    background-color: rgba(218, 112, 214, 0.705);
+}
+
+
+/* 요소 카운트는 처음부터 시작하지만 적용되는것은 해당태그에만
+적용되기 때문에 카운트는 pre부터 세고 p태그중 홀수태그에만 적용이 된다 */
+#test4 p:not(:nth-child(even)){
+    background-color: darkcyan;
+}
