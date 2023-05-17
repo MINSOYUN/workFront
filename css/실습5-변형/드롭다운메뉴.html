@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            text-decoration: none;
+            color: rgb(73, 72, 72);
+            box-sizing: border-box;
+        }
+        nav .menu{
+            /* 부모 요소를 벗어나면 숨김 처리 */
+            overflow: hidden;
+        }
+        nav .menu li{
+            width: 200px;
+            border: 1px solid rgba(155, 79, 26, 0.301) ;
+            /* 위치가 li 요소안에 위치하도록 */
+            position: relative;
+            /* overflow: hidden; */
+            /* height: 30px; 30px로 하면 자리가 겹쳐서 높이는 뺀다 */
+        }
+        nav .menu li a{
+            /* 인라인요소이므로 크기를 지정하기 위해 속성 변경 */
+            display: inline-block;
+            width: 100%;
+            line-height: 30px;
+            background-color: rgb(171, 199, 252);
+            font-size: 1.2em;
+            font-weight: 800;
+            padding: 20px;
+        }
+        nav .menu li a:hover{
+            background-color: rgba(16, 163, 163, 0.664);
+            color: white;
+        }
+        nav .menu li a:hover span{
+            transform: rotate(45deg);
+        }
+        /* +: 형제 요소 선택
+            우선 순위에 의해서 인라인 스타일 > id 스타일 > class 스타일 > 태그스타일 */
+            nav .menu .submenu li{
+                padding-left: 20px;
+            }
+            nav .menu .submenu li a{
+            font-size: 1em;
+            font-weight: 700;
+            padding-left: 10px;
+        }
+        nav .menu li a:hover+.submenu, nav .menu li .submenu:hover{
+            /* display를 block으로,
+               height: auto 으로 할 경우
+               transition 실행이 안된다 */
+            /* display: block; */
+            max-height: 500px;
+        }
+        nav .menu .submenu{
+            /* 메뉴에 마우스가 올라왔을 때 서브메뉴를 보여줌 */
+            /* 화면에서 숨김 */
+            /* display: none; */
+            max-height: 0px;
+            /* 보이게 하려면 display: block; */
+            transition: 1s;
+        }
+        .menu li a span{
+            position: absolute;
+            right: 30px;
+            color: rgb(182, 67, 67);
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+    <ul class='menu'>
+        <li><a href="#">메뉴1</a></li>
+        <li>
+            <a href="#">메뉴2<span>+</span></a>
+            <ul class='submenu'>
+                <li><a href="#">서브메뉴2-1</a></li>
+                <li><a href="#">서브메뉴2-2</a></li>
+                <li><a href="#">서브메뉴2-3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">메뉴3 <span>+</span> </a>
+            <ul class='submenu'>
+            <li><a href="#">서브메뉴3-1</a></li>
+            <li><a href="#">서브메뉴3-2</a></li>
+            <li><a href="#">서브메뉴3-3</a></li>
+            </ul>
+        <li><a href="#">메뉴4</a></li>
+        <li><a href="#">메뉴5</a></li>
+    </li>
+    </nav>
+</body>
+</html>

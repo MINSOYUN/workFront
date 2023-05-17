@@ -48,6 +48,7 @@ button:disabled{
 #test2 p:first-child{
     background-color: rgba(183, 138, 228, 0.795);
     color: white;
+    border-top-left-radius: 1em;
 }
 /* 형제 관계 중 마지막 요소를 선택 */
 /* 마지막 자식이 p 태그가 아니면 스타일이 지정되지 않는다

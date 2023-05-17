@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(53, 53, 129, 0.384);
+}
+#container{
+    width: 320px;
+    margin: 50px auto;
+    border: 1px solid salmon;
+}
+.card{
+    width: 300px;
+    height: 500px;
+    margin: 20px 10px;
+    border: 2px solid rgba(80, 79, 79, 0.89);
+    background-color: rgba(214, 228, 228, 0.877);
+    position: relative;
+}
+.words{
+    position: absolute;
+    left: 10px;
+    top: 300px;
+    padding: 10px;
+    text-align: center;
+}
+/* .min-width 768px, max 1719 */
+@media screen and (min-width: 768px) and (max-width: 1719px){
+    #container{
+        width: 570px;
+        border: 1px solid seagreen;
+    }
+    /* 요소가 나란히 배치 될 수 있도록 너비를 조정 */
+    .card{
+        width: 550px;
+        height: 250px;
+    }
+    /* 기존 아래쪽 -> 이미지 오른쪽에 위치 */
+    .words{
+        left: 310px;
+        top: 50px;
+        width: 200px;
+        border: 1px solid springgreen;
+    }
+}

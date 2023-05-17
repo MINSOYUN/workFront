@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- name: 설정이름, content: 설정 값 -->
+    <!-- 기기의 width 값으로 설정하고 배율을 지정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뷰포트</title>
+    <style>
+        .em2{
+            font-size: 2em;
+        }
+        .em3{
+            font-size: 0.5em;
+        }
+        .rem2{
+            font-size: 2rem;
+        }
+        html{
+            /* 기본글자 크기 = 1rem */
+            font-size: 10px;
+        }
+        .vw1{
+            font-size: 1vw;
+        }
+        .vw2{
+            font-size: 2vw;
+        }
+        .vh1{
+            font-size: 1vh;
+        }
+        .vh2{
+            font-size: 2vh;
+        }
+        .vmin2{
+            font-size: 2vmin;
+        }
+        .vmax{
+            font-size: 2vmax;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        상대단위 : 고정되지 않고 어떤 기준에 따라 유동적으로 바뀔 수 있는 길이(rem, rem, %, vw, vh) <br>
+        절대단위; 항상 고정된 길이를 나타내는 단위(px, pt)
+    </p>
+</p>
+<h3>단위</h3>
+브라우저의 기본 글자크기(16px)
+<h3>em과 rem</h3>
+font-size에 비례해서 결정되는 상대 단위<br>
+<!-- 부모의 값을 기준으로 해서 글자 크기가 정해지는것이 em -->
+em: 요소를 기준으로 1em <br>
+rem: 최상의 요소(html)의 글자크기를 기준으로 1rem
+<hr>
+
+<h3>View port</h3>
+현재 화면에 보여지는 영역
+<p>
+기기별 뷰포트가 다르므로 동일한 웹페이지라도 기기에 따른 배율 조정이 발생하여 화면의 크기가 다르게 보이는 현상
+</p>
+<div>
+    div 1depth
+    <div class='em2'> 
+        div 2depth
+        <div class='em2'> 
+            div 3depth
+            <div class='em3'> 
+                div 4depth
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    div 1depth
+    <div class='rem2'> 
+        div 2depth
+        <div class='rem2'> 
+            div 3depth
+            <div class='rem2'> 
+                div 4depth
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+
+<h3>vw</h3>
+화면 너비의 1/100: 1vw
+<div class='vw1'>1vw
+    Duis reprehenderit officia officia eu sint non non ipsum ea.
+</div>
+<div class='vw2'>2vw
+    Sit occaecat tempor commodo aute anim id labore consectetur enim tempor esse. Sint consectetur proident consequat aute 
+    ullamco amet sunt velit elit exercitation amet ut duis exercitation. Nostrud culpa mollit ad anim et fugiat magna non ullamco.
+</div>
+<hr>
+
+<h3>vh</h3>
+화면 높이의 1/100: 1vw
+<div class='vh1'>1vh
+    Duis reprehenderit officia officia eu sint non non ipsum ea.
+</div>
+<div class='vh2'>2vh
+    Sit occaecat tempor commodo aute anim id labore consectetur enim tempor esse. Sint consectetur proident consequat aute 
+    ullamco amet sunt velit elit exercitation amet ut duis exercitation. Nostrud culpa mollit ad anim et fugiat magna non ullamco.
+</div>
+<hr>
+
+<h3>vmin</h3>
+뷰포트 너비와 높이 중 작은 값의 1%
+<div class='vmin2'>2vmin
+    Sit occaecat tempor commodo aute anim id labore consectetur enim tempor esse. Sint consectetur proident consequat aute 
+    ullamco amet sunt velit elit exercitation amet ut duis exercitation. Nostrud culpa mollit ad anim et fugiat magna non ullamco.
+</div>
+<hr>
+<h3>vmax</h3>
+뷰포트 너비와 높이 중 큰 값의 1%
+<div class='vmax2'>2vmax
+    Sit occaecat tempor commodo aute anim id labore consectetur enim tempor esse. Sint consectetur proident consequat aute 
+    ullamco amet sunt velit elit exercitation amet ut duis exercitation. Nostrud culpa mollit ad anim et fugiat magna non ullamco.
+</div>
+</body>
+</html>

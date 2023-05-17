@@ -1,0 +1,159 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(46, 45, 45);
+}
+.wrap{
+    width: 1000px;
+    height: 700px;
+    margin: 0px auto;
+}
+header{
+    width: 100%;
+    height: 100px;
+    /* background-color: antiquewhite; */
+}
+#lo{
+    width: 1000px;
+    height: 70%;
+}
+header #logo{
+    background: url(images/logo.jpg) no-repeat;
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+header #mainlogo{
+    background: url(images/mainlogo.jpg) no-repeat center;
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+header nav{
+    width: 100%;
+    height: 25%;
+    background-color: rgba(38, 163, 38, 0.815);
+    position: relative;
+    bottom: 0px;
+    clear: both;
+    text-align: center;
+}
+ul{
+    padding: 0px;
+}
+nav ul li{
+    width: 20%;
+    height: 25px;
+    float: left;
+    /* border: 1px solid black; */
+}
+header nav ul li a{
+    display: inline-block;
+    width: 100%;
+    height: 25px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+}
+header nav ul li a:hover{
+    background-color: rgba(64, 124, 126, 0.712);
+}
+
+
+main{
+    width: 100%;
+    height: 700px;
+}
+main #left{
+    width: 200px;
+    height: 100%;
+    background: url(images/left_img.jpg) no-repeat;
+    background-size: contain;
+    float: left;
+}
+#mainContent{
+    width: 550px;
+    height: 100%;
+    float: left;
+}
+main #mainContent ul{
+    padding: 0px;
+    width: 550px;
+    height: 500px;
+}
+main #mainContent ul li{
+    float: left;
+    width: 50%;
+    height: 50%;
+    padding: 10px;
+    float: left;
+    text-align: center;
+}
+main li img{
+    width: 100%;
+}
+
+
+main #right{
+    width: 250px;
+    height: 100%;
+    float: left;
+}
+#login_wrap{
+    width: 100%;
+    height: 15%;
+    margin-bottom: 20px;
+}
+#login_form{
+    height: 80%;
+}
+#login_form_input{
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+#login_form_input input[type=text]{
+    width: 100%;
+    height: 50%;
+}
+#login_form_input input[type=password]{
+    width: 100%;
+    height: 50%;
+}
+#login_form_btn{
+    background-color: beige;
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+#login_form_btn input[type=submit]{
+    font-weight: 800;
+    font-size: 0.8em;
+    width: 65%;
+    height: 65%;
+    margin-left: 20%;
+    margin-top: 15%;
+}
+#login_link{
+    height: 20%;
+    width:100%;
+    text-align: center;
+}
+a{
+    /* display: inline-block; */
+    text-decoration: none;
+    color: black;
+    font-size: 0.8em;
+}
+#img1{
+    width: 250px;
+    margin-bottom: 10px;
+}
+#img2{
+    width: 250px;
+}
+footer img{
+    width: 800px;
+}
