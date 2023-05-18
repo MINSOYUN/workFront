@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭 메뉴 만들기</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #contents{
+            width: 500px;
+            height: 300px;
+        }
+        #tapMenu{
+            width: 100%;
+            position: relative;
+        }
+        #tabMenu input[type=radio]{
+            /* 라디오 버튼 안 보이게 설정 */
+            display: none;
+        }
+        /* 메뉴 속성 설정 */
+        #tabMenu label{
+            display: inline-block;
+            padding: 20px;
+            margin: 0px;
+            font-weight: 800;
+            color: rgb(121, 119, 119);
+            height: 60px;
+        }
+        /* 마우스를 올리면 글씨색 검정색으로 변경 */
+        #tabMenu label:hover{
+            color: black;
+        }
+        /* 선택된 input 타입의 바로 뒤에 있는 label */
+        #tabMenu input:checked + label{
+            border: 1px solid rgb(179, 173, 173);
+            background-color: rgba(202, 200, 200, 0.432);
+            color: rgb(199, 25, 25);
+        }
+        .tabContent{
+            display: none;
+            border-top: 1px solid rgb(189, 183, 183);
+            padding: 10px 20px;
+            line-height: 2;
+            position: absolute;
+            left: 0;
+            top: 59px;
+            width: 800px;
+        }
+        #tab_btn_notice:checked ~ #notice{
+           display: block;
+        }
+        #tab_btn_gallery:checked ~ #gallery{
+            display: block;
+        }
+        #gallery ul li {
+            /* 인라인 요소를 만들어 한줄에 여러개의 요소를 나열 */
+            display: inline-block;
+            width: 40%;
+        }
+        #gallery ul li img{
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id='contents'>
+        <div id='tabMenu'>
+            <input type="radio" name='tabs' id='tab_btn_notice'> <!-- 체크드 속성 사용 -->
+            <!-- 라벨이 선택되도 연결된 요소가 체크 되는 효과
+                 라벨이 선택되도 cehcked 속성이 걸어진다 -->
+            <label for="tab_btn_notice">공지사항</label>
+            <input type="radio" name='tabs' id='tab_btn_gallery' checked>
+            <label for="tab_btn_gallery">갤러리</label>
+        <!-- 공지사항 -->
+        <article id='notice' class='tabContent'>
+            <!-- <h3>공지사항</h3> -->
+            <ul>
+                <li>게시글1</li>
+                <li>게시글2</li>
+                <li>게시글3</li>
+                <li>게시글4</li>
+                <li>게시글5</li>
+            </ul>
+        </article>
+        <!-- 갤러리 -->
+        <article  id='gallery' class='tabContent'>
+            <h3>갤러리</h3>
+            <ul>
+                <li> <img src="images/cup-1.jpg" alt=""> </li>
+                <li> <img src="images/cup-2.jpg" alt=""> </li>
+                <li> <img src="images/cup-3.jpg" alt=""> </li>
+                <li> <img src="images/cup-4.jpg" alt=""> </li>
+            </ul>
+        </article>
+        </div>
+    </div>
+</body>
+</html>

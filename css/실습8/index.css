@@ -1,0 +1,196 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+#container{
+    width: 1000px;
+    height: 600px;
+}
+header{
+    width: 1000px;
+    height: 100px;
+    display: flex;
+    background-color: rgb(75, 151, 223);
+    position: relative;
+}
+header #logo{
+    width: 50%;
+}
+header #logo h1{
+    display: inline-block;
+}
+header #logo a{
+    color: white;
+    line-height: 100px;
+    padding-left: 15px;
+}
+header nav{
+    width: 50%;
+    height: 100%;
+    
+}
+#topMenu{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+    
+}
+header nav #topMenu li{
+    width: 100px;
+    height: 100%;
+    margin:0px 20px;
+    /* border: 1px solid red; */
+    display: inline-block;
+
+}
+header nav #topMenu li a{
+    width: 100px;
+    height: 100;
+    line-height: 50px;
+    display: inline-block;
+    /* border: 1px solid navy; */
+    font-size: smaller;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+
+}
+
+#slides > img{
+    width: 1000px;
+
+}
+
+
+#contents{
+    width: 1000px;
+    height: 500px;
+    position: relative;
+}
+#tapMenu{
+    width: 400px;
+    height: 400px;
+    float: left;
+}
+#tabMenu input[type=radio]{
+    /* 라디오 버튼 안 보이게 설정 */
+    display: none;
+}
+/* 메뉴 속성 설정 */
+#tabMenu label{
+    display: inline-block;
+    padding: 20px;
+    margin: 0px;
+    font-weight: 800;
+    color: rgb(121, 119, 119);
+    height: 60px;
+}
+/* 마우스를 올리면 글씨색 검정색으로 변경 */
+#tabMenu label:hover{
+    color: black;
+}
+/* 선택된 input 타입의 바로 뒤에 있는 label */
+#tabMenu input:checked + label{
+    border: 1px solid rgb(179, 173, 173);
+    background-color: rgba(202, 200, 200, 0.432);
+    color: rgb(199, 25, 25);
+}
+#contents #tabMenu .tabContent{
+    display: none;
+    border-top: 1px solid rgb(189, 183, 183);
+    padding: 10px 20px;
+    line-height: 2;
+    position: absolute;
+    left: 0;
+    top: 59px;
+    width: 400px;
+    padding: 0px;
+}
+.tabContent ul{
+    width: 400px;
+}
+.tabContent ul li{
+    width: 110px;
+}
+#tab1:checked ~ #notice{
+   display: block;
+}
+#tab2:checked ~ #gallery{
+    display: block;
+}
+#gallery ul li {
+    /* 인라인 요소를 만들어 한줄에 여러개의 요소를 나열 */
+    display: inline-block;
+    width: 40%;
+}
+#gallery ul li img{
+    /* width: 80%; */
+    height: 70px;
+}
+
+#sns{
+    justify-content: flex-end;
+    float: right;
+}
+
+
+#links{
+    width: 50%;
+    height: 400px;
+    float: right;
+}
+#links ul{
+    width: 100%;
+    height: 50px;
+    list-style: none;
+}
+#links ul li{
+    width: 100px;
+    height: 150px;
+    display: inline-block;
+    margin-right: 50px;
+}
+#links a{
+    width: 100px;
+    height: 150px;
+    color: black;
+    display: inline-block;
+    /* margin-right: 20px; */
+}
+#links a p{
+    text-align: center;
+    margin-top: 5px;
+}
+#links img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+footer{
+    width: 1000px;
+    height: 100px;
+    clear: both;
+    border-top: 2px solid rgb(61, 60, 60);
+}
+#bottomMenu ul{
+
+}
+#bottomMenu ul li{
+    display: inline-block;
+    padding: 20px;
+    border-right: 1px solid gainsboro;
+}
+#bottomMenu ul li a{
+    color: rgb(54, 52, 52);
+}
+#company{
+    font-size: smaller;
+    padding-left: 20px;
+}

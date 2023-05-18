@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별점주기</title>
+    <style>
+        .star-rate{
+            position: relative;
+            margin: 50px;
+            /* border: 1px solid red; */
+        }
+        .star-rate div{
+            position: absolute;
+            /* top과 left값을 0으로 만들어 빈 별과 찬 별의 위치를 겹쳐준다 */
+            top: 0px;
+            left: 0px;
+            font-size: 20px;
+        }
+        .star-full{
+            width: 20px;
+            /* width 값을 설정하고 hidden을 사용하면 넘치는 부분 숨겨져서 별 하나만 출력 */
+            border: 1px solid red;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class='star-rate'>
+        <div class='star-full'>★★★★★</div>
+        <div>☆☆☆☆☆</div>
+    </div>
+</body>
+</html>

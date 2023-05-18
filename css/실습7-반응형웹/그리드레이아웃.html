@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 레이아웃</title>
+    <style>
+        .wrapper{
+            /* 그리드 컨테이너 지정 */
+            display: grid;
+            /* 컬럼의 개수와 크기 지정
+                px 고정단위이므로 컨첸츠가 길어질 경우 짤림 현상이 있을 수 있다 */
+            grid-template-columns: 200px 200px 200px;
+            /* 반복되는 경우에는 함수 사용 가능
+                repeat(갯수, 크기) -> 너비 200px 3개 */
+            grid-template-columns: repeat(3,200px);
+            /* fr(fraction)단위: 그리드 컨테이너의 여유공간을 비율로 나눠서 설정 */
+            grid-template-columns: repeat(3,1fr);
+            /* 행의 개수와 크기 지정 */
+            grid-template-rows: 100px;
+            /* 최소값(min) 최대값(max) 지정 */
+            grid-template-rows: repeat(2, minmax(100px, auto));
+
+            /* 줄간격, 컬럼 간격 */
+            gap: 10px 20px;
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+        .item{
+            padding: 10px;
+            background-color: rgba(255, 255, 224, 0.822);
+        }
+        .item:nth-child(even){
+            background-color: rgba(206, 205, 201, 0.849);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item">
+            Ut ea culpa esse sunt labore fugiat excepteur duis aliquip proident culpa consectetur cillum sunt.
+        </div>
+        <div class="item">
+            Ut duis pariatur pariatur aute labore duis id elit sit sint fugiat velit cillum velit.
+            
+        </div>
+        <div class="item">
+            Proident id labore sit exercitation est fugiat exercitation enim.
+        </div>
+        <div class="item">
+            Labore eiusmod eu voluptate aliquip dolore sunt exercitation aliqua adipisicing culpa anim.
+        </div>
+        <div class="item">
+            Enim pariatur occaecat mollit nostrud quis laborum consequat est deserunt sint do.
+        </div>
+    </div>
+</body>
+</html>
