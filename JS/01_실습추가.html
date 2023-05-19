@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인치 센치로 변환</title>
+</head>
+<body>
+    <button onclick='change()'>변환</button>
+    <div id='inch'></div>
+
+    <script>
+        function change(){
+            var inch = document.querySelector('#inch');
+            var prom = prompt('인치를 입력하세요');
+            var result = parseFloat(prom) * 2.54;
+            inch.innerHTML = result;
+        }
+    </script>
+
+</body>
+</html>
