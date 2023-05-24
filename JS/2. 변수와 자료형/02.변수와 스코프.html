@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수와 스코프</title>
+    <script src='02.변수와 스코프.js'></script>
+</head>
+<body>
+    <h3>기본문법</h3>
+    <h4>1) 전역변수와 지역변수</h4>
+    <ul>
+        <li>
+            <h4>전역변수와 지역변수</h4>
+            <p>전역변수: 함수 외부에서 선언(어디에서든 사용 가능)</p>
+            <p>지역변수: 함수 내부에서 선언(함수 내부에서만 사용 가능)</p>
+        </li>
+    </ul>
+    <h4>2) 변수와 스코프</h4>
+    식별자가 선언된 위치 및 예약어에 따라 유효 범위가 결정된다
+    <ul>
+        <li>함수레벨 스코프(var)
+            <br> 함수 외부에서 함수 내부에서 선언된 변수에 접근 불가
+        </li>
+        <li>블럭레벨 스코프(let, const)
+            <br>블럭 외부에서 블럭 내부에 선언됨 변수에 접근 불가</br>
+        </li>
+    </ul>
+    예약어를 붙이지 않은 경우 오류가 발생하지 않으며 전역 변수로 생성됨
+</body>
+</html>

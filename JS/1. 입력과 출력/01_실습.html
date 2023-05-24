@@ -58,12 +58,21 @@
             var color = selectColor.value;
             // getComputedStyle: 지정된 요소에 대한 계산된 스타일을 포함하는 객체를 반환
             var boxColor=getComputedStyle(div1).backgroundColor;
-            console.log(color);
+            console.log(color); // 16진수 -> 10진수로 변경
+            // #123456
+            var r=parseInt(color.substr(1,2),16);
+            var g=parseInt(color.substr(3,2),16);
+            var b=parseInt(color.substr(5,2),16);
+            // rgb 타입으로 생성
+            var rgbColor=`rgb ${r}, ${b}, ${b}`;
+            console.log(rgbColor);
             console.log(boxColor);
 
             // 1. 선택된 색상과 박스의 색상이 같다면 메세지 처리
-            if(color==boxColor){
+            if(rgbColor==boxColor){
                 alert('선택한 색상과 박스의 색상이 같습니다');
+            } else{
+                div1.style.backgroundColor=color;
             }
             // 2. 박스의 크기를 200*200으로 변경
             div1.style.width='200px';

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또생성기</title>
+    <style>
+        .ball{
+            width:50px;
+            height:50px;
+            line-height: 50px;
+            text-align: center;
+
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            display: inline-block;
+            margin: 10px;
+            
+            box-shadow: 2px 2px 10px 0px #999
+                        , inset 2px 2px 10px 0px #ccc;
+        }
+    </style>
+    
+    <!-- 콘솔창에 로그를 찍어서 연결이 되었는지 확인!! -->
+    <script src="02_변수와 스코프실습(로또생성기).js"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    
+</head>
+<body>
+    <h1>로또 생성기</h1>
+    <button id = 'btn1'>로또번호 생성하기</button>
+    <div class = 'lottoDiv'>
+        생성전
+        <div class='ball'>55</div>
+        <div class='ball'>10</div>
+        <div class='ball'>27</div>
+        <div class='ball'>33</div>
+        <div class='ball'>15</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classList 활용하기</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <button id='mode'>모드변경</button> <br>
+  <h1 id="title" class='clicked'>My Profile</h1>
+  <div id="profile">
+    <img src="images/pf.png" alt="도레미">
+    <div id="desc">
+      <p class="user">이름 : 도레미</p>
+      <p class="user">주소 : somewhere</p>
+      <p class="user">연락처 : 1234-5678</p>
+    </div>
+  </div>
+
+  <script>
+    title.onclick=() => {
+      // 1. 클릭 시 class 속성에 clicked를 추가
+      // title.classList.add('clicked');
+      // 2. class 속성에 포함되어 있는지 확인 후 없으면 추가, 있으면 삭제
+      if(!title.classList.contains('clicked')){
+        title.classList.add('clicked');
+      } else {
+        title.classList.remove('clicked');
+      }
+      // 3. toggle
+      // title.classList.toggle('clicked');
+    }
+
+    // desc에서 첫번째 p 태그만 해당
+    const userName = document.querySelector('#desc p');
+    userName.onclick= ()=>{
+      userName.classList.toggle('blue-italic');
+    };
+
+    // desc에서 두번째 p 태그만 해당
+    const userName1 = document.querySelector('#desc p:nth-child(2)');
+    userName1.onclick= ()=>{
+      userName1.classList.toggle('user');
+    };
+
+    // 안됨 이유 알기!
+    let clas =document.getElementsByTagName('div');
+    clas.onclick=()=>{
+      clas.classList.toggle('dark');
+    }
+
+    // id=desc 전체 적용
+    // desc.onclick = ()=>{
+    //   desc.classList.toggle('blue-italic');
+    // }
+
+    mode.onclick = ()=>{
+      document.body.classList.toggle('dark');
+    }
+  </script>
+
+</body>
+</html>
