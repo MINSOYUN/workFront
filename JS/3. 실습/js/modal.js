@@ -1,5 +1,5 @@
 window.onload = function(){
-        // open, close 는 window 객체의 ㅐ장 함수
+        // open, close 는 window 객체의 내장 함수
         // 아이디로 참조 불가
         // 직접 변수에 담아줘야 한다
         
@@ -16,6 +16,7 @@ window.onload = function(){
             // modal.classList.add('active');  // active 속성 추가 -> display: flex
             modal.style.display = 'flex';
         });
+
 
         close.addEventListener('click', function(){
             // close: 모달창 닫기

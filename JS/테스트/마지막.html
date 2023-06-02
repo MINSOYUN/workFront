@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function testJson() {
+          // 학생 정보를 JSON 형식의 문자열로 생성
+          var student1 = {
+            name: "고경희",
+            major: "컴퓨터공학",
+            grade: 2,
+            phone: "010-1111-2222"
+          };
+      
+          var student2 = {
+            name: "홍길동",
+            major: "컴퓨터공학",
+            grade: 2
+          };
+      
+          // JavaScript Object를 console에 출력
+          console.log(student1);
+          console.log(student2);
+      
+          // Object를 JSON 문자열로 변환하여 console에 출력
+          var jsonString1 = JSON.stringify(student1);
+          var jsonString2 = JSON.stringify(student2);
+      
+          console.log(jsonString1);
+          console.log(jsonString2);
+        }
+      </script>
+      
+      <button id="btn" onclick="testJson()">실행</button>
+      
+</body>
+</html>

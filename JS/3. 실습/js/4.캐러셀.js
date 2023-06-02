@@ -57,6 +57,15 @@ function imgChange(){
         update();
 };
 
+function imgChange(){
+    index++;
+    if(index>=pics.length){
+        index = 0;
+    }
+    update();
+}
+
+
 function stop(){
     console.log('setInterval 중지');
     clearInterval(interval);

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블</title>
+    <style>
+        #submit{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>회원 가입폼</p>
+    <form method='post' onsubmit='validateForm()'>
+    <table border='1'>
+        <tr>
+            <th>ID</th>
+            <td>
+                <input type='text' name='ID'></input>
+                <button type='button'>ID중복검사</button>
+            </td>
+        </tr>
+        <tr>
+            <th>비밀번호</th>
+            <td><input type='password' name='password' ></td>
+        </tr>
+        <tr>
+            <th>성명</th>
+            <td><input type='text' name='name'></td>
+        </tr>
+        <tr>
+            <th>E-Mail</th>
+            <td>
+                <input type='email' name='email'> @
+                <input type='email' name='email'>
+                <select>
+                    <option value="choice">직접입력</option>
+                    <option value="011">naver.com</option>
+                    <option value="010">daum.net</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>핸드폰</th>
+            <td>
+                <select  name="phonePrefix">
+                <option value="choice">번호선택</option>
+                <option value="011">010</option>
+                <option value="010">011</option>
+                </select>
+                <input type='text' name='second'> -
+                <input type='text' name='third'>
+            </td>
+        </tr>
+        <tr>
+            <th>성별</th>
+            <td>
+                <input type='radio' name='gender' value='M'> 남자
+                <input type='radio' name='gender' value='F'> 여자
+            </td>
+        </tr>
+        <tr>
+            <th>취미</th>
+            <td><input type='checkbox' name='hobby' value='study'> 공부
+                <input type='checkbox' name='hobby' value='mountain'> 등산
+                <input type='checkbox' name='hobby' value='game'> 게임
+                <input type='checkbox' name='hobby' value='fish'> 낚시
+                <input type='checkbox' name='hobby' value='shopping'> 쇼핑
+            </td>
+        </tr>
+        <tr>
+            <th>자기소개</th>
+            <td><textarea name="text" cols="70" rows="10" placeholder='자기소개를 100자 이내로 입력하세요'></textarea></td>
+        </tr>
+        <tr>
+            <td colspan='2' id='submit'>
+               <input type="submit" value='회원가입'>
+               <input type="reset" value='취소'>
+            </td>
+            <!-- <td></td> -->
+        </tr>
+
+    </table>
+    </form>
+
+
+    <script>
+        function validateForm() {
+          // 취미 유효성 검사
+          var hobbyCheckboxes = document.querySelectorAll('input[name="hobby"]:checked');
+          if (hobbyCheckboxes.length < 2) {
+            alert("취미는 2개 이상 선택해야 합니다.");
+            return false;
+          }
+        
+          // 자기소개 유효성 검사
+          var introText = document.getElementById("intro").value;
+          if (introText.length > 100) {
+            alert("자기소개는 100자 이내로 입력해야 합니다.");
+            return false;
+          }
+        
+          // 핸드폰 번호 유효성 검사
+          var phonePrefix = document.querySelector('select[name="phonePrefix"]').value;
+          if (phonePrefix === "choice") {
+            alert("핸드폰 번호 앞자리를 선택해야 합니다.");
+            return false;
+          }
+        
+          // 성별 유효성 검사
+          var genderRadios = document.querySelectorAll('input[name="gender"]:checked');
+          if (genderRadios.length === 0) {
+            alert("성별을 선택해야 합니다.");
+            return false;
+          }
+        
+          return true;
+        }
+      </script>
+      
+</body>
+</html>

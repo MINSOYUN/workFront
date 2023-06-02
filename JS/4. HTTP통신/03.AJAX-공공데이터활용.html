@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공공데이터활용</title>
+    <style>
+        *{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div id='result'>
+
+    </div>
+    <script>
+        let url = 'https://apis.data.go.kr/B551011/GoCamping/locationBasedList?serviceKey=G9O5DqSe6uSTMj7%2FIKmJe%2B1JuDAgxQhMl6%2FXVGQ4wpkLbqvl1IG9qL8Y3n5ZmJncp%2F50jv%2B7CuF7iSuB9T0aZA%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&mapX=128.6142847&mapY=36.0345423&radius=2000&_type=json';
+        let xhr = new XMLHttpRequest(); // 객체 생성
+        xhr.open('get', url); // 요청
+        xhr.send();
+
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState === 4 && xhr.status === 200){
+                console.log(xhr.responseText);
+                // 객체로 변환
+                let jsObj = JSON.parse(xhr.responseText);
+                console.log(jsObj);
+                let itemArr = jsObj.response.body.items.item;
+                
+                let resDiv = document.querySelector('#result');
+                resDiv.innerHTML += '<ul>';
+                for (const item of itemArr) {
+                    resDiv.innerHTML += `
+                    <li>
+                        <h2>${item.facltNm}</h2>
+                        <p>${item.intro}</p>
+                        <p><img src = ${item.firstImageUrl}></p>
+                    </li>
+                    `;
+                    }
+                resDiv.innerHTML += '</ul>';
+            }
+        }
+    </script>
+</body>
+</html>
